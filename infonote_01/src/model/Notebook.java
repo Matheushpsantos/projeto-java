@@ -53,8 +53,8 @@ public class Notebook {
 	}
 	@Override
 	public String toString() {
-		return "Notebook \nnumeroNote: " + numeroNote + ",   modelo: " + modelo + ",   descricao: " + descricao + ",   estoque: "
-				+ estoque + "\nprecoUnitario=" + precoUnitario + ",   figura:" + figura + ",   dataCadastro: " + dataCadastro;
+		return "NOTEBOOK \n|numeroNote: " + numeroNote + "|     |modelo: " + modelo + "|     |descricao: " + descricao + "|     |estoque: "
+				+ estoque + "|\n\n|precoUnitario=" + precoUnitario + "|     |figura:" + figura + "|     |dataCadastro: " + dataCadastro +"|\n";
 	}
 	
 	

@@ -47,8 +47,8 @@ public class Usuario {
 	}
 	@Override
 	public String toString() {
-		return "Usuario \nmatricula: " + matricula + ",   login: " + login + ",   senha: " + senha + ",   nome:" 
-				+ nome + "\nemail: " + email + ",   telefone: " + telefone +"\n";
+		return "USUÁRIO \n|matricula: " + matricula + "|     |login: " + login + "|     |senha: " + senha + "|     |nome:" 
+				+ nome + "|\n"+"\n|email: " + email + "|     |telefone: " + telefone +"|\n";
 	}
 
 	

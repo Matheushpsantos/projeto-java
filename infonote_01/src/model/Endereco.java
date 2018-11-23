@@ -53,9 +53,9 @@ public class Endereco {
 	}
 	@Override
 	public String toString() {
-		return "Endereço \nlogradouro: " + logradouro + ",   numero: " + numero 
-				+ "\ncomplemento: " + complemento
-				+ ",   bairro: " + bairro + ",   cidade: " + cidade + ",   estado: " + estado + ",   cep: " + cep;
+		return "ENDEREÇO \n|logradouro: " + logradouro + "|     |numero: " + numero 
+				+ "\n\n|complemento: " + complemento
+				+ "|     |bairro: " + bairro + "|     |cidade: " + cidade + "|     |estado: " + estado + "|\n\n|cep: " + cep +"|\n";
 	}
 	
 	

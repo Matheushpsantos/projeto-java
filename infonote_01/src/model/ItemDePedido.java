@@ -18,7 +18,7 @@ public class ItemDePedido {
 	}
 	@Override
 	public String toString() {
-		return "ItemDePedido \nQuantidade: " + qtde + ",  subtotal=" + subtotal;
+		return "ITEM DE PEDIDO \n|Quantidade: " + qtde + "|    |subtotal=" + subtotal +"|\n";
 	}
 	
 	

@@ -39,8 +39,8 @@ public class Pedido {
 	}
 	@Override
 	public String toString() {
-		return "Pedido \nnumero: " + numero + ",  dataEmissão: " + dataEmissão + ",  formaDePagamento: " + formaDePagamento
-				+ "\nvalorTotal: " + valorTotal + ",  situacao:" + situacao + "]";
+		return "PEDIDO \n|numero: " + numero + "|    |dataEmissão: " + dataEmissão + "|    |formaDePagamento: " + formaDePagamento
+				+ "|\n\n|valorTotal: " + valorTotal + "|    |situacao:" + situacao +"|\n";
 	}
 	
 	
