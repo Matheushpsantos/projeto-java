@@ -45,6 +45,8 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "USUÁRIO \n|matricula: " + matricula + "|     |login: " + login + "|     |senha: " + senha + "|     |nome:" 
