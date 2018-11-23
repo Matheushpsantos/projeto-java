@@ -45,6 +45,19 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	
+	
+	public Usuario(int matricula2, String login2, String senha2, String nome2, String email2
+			, String telefone2) {
+		super();
+		this.matricula = matricula;
+		this.login = login;
+		this.senha = senha;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+	}
 	@Override
 	public String toString() {
 		return "USUÁRIO \n|matricula: " + matricula + "|     |login: " + login + "|     |senha: " + senha + "|     |nome:" 

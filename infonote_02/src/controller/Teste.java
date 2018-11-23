@@ -6,7 +6,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-	Usuario usuario1 = new Usuario();
+	Usuario usuario1 = new Usuario(00421,"joelee", "*****", "Joe Lee", "lee@gmail.com","21 987220222");
 	Endereco endereco1 = new Endereco();
 	Pedido pedido1 = new Pedido();
 	ItemDePedido item1 = new ItemDePedido();
@@ -16,16 +16,6 @@ public class Teste {
 	Notebook notebook3 = new Notebook();
 	
 	
-	// Usuario
-	System.out.println("");//linha de design
-	System.out.println("______________________________________________");//linha de design
-	usuario1.setEmail("murillo01@gmail.com");
-	usuario1.setLogin("Murillo01");
-	usuario1.setMatricula(2246);
-	usuario1.setSenha("1234");
-	usuario1.setTelefone("21 5656-4444");
-	usuario1.setNome("Murillo");
-	System.out.println(usuario1.toString());// mostra o resultado dos set's
 	
 	// Endereco
 	System.out.println("");//linha de design
