@@ -59,5 +59,34 @@ public class Endereco {
 	}
 	
 	
+	
+	public Endereco() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Endereco(String ConstruLogradouro, String ConstruNumero, String ConstruComplemento, String ConstruBairro, String ConstruCidade, String ConstruEstado,
+			String ConstruCep) {
+		super();
+		this.logradouro = ConstruLogradouro;
+		this.numero = ConstruNumero;
+		this.complemento = ConstruComplemento;
+		this.bairro = ConstruBairro;
+		this.cidade = ConstruCidade;
+		this.estado = ConstruEstado;
+		this.cep = ConstruCep;
+	}
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nENDEREÇO:\n");
+		System.out.println("Logradouro: "+this.logradouro);
+		System.out.println("Numero: "+this.numero);
+		System.out.println("Complemento: "+this.complemento);
+		System.out.println("Bairro: "+this.bairro);
+		System.out.println("Cidade: "+this.cidade);
+		System.out.println("Estado: "+this.estado);
+		System.out.println("Cep: "+this.cep);
+		
+	}
 
 }

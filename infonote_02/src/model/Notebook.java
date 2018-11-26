@@ -58,4 +58,34 @@ public class Notebook {
 	}
 	
 	
+	public Notebook() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Notebook(int construNumeroNote, String construModelo, String construDescricao, int construEstoque, double construPrecoUnitario, String construFigura,
+			String construDataCadastro) {
+		super();
+		this.numeroNote = construNumeroNote;
+		this.modelo = construModelo;
+		this.descricao = construDescricao;
+		this.estoque = construEstoque;
+		this.precoUnitario = construPrecoUnitario;
+		this.figura = construFigura;
+		this.dataCadastro = construDataCadastro;
+	}
+	
+	public void mostrar () {
+		
+		System.out.println("\n\nNOTEBOOK:\n");
+		System.out.println("Numero do Notebook: "+this.numeroNote);
+		System.out.println("Modelo: "+this.modelo);
+		System.out.println("Descrição: "+this.descricao);
+		System.out.println("Estoque: "+this.estoque);
+		System.out.println("Preço Unitário: "+this.precoUnitario);
+		System.out.println("Figura: "+this.figura);
+		System.out.println("Data de cadastro: "+this.dataCadastro);
+																
+	}
+	
+	
 }

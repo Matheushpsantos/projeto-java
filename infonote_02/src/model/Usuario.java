@@ -46,18 +46,36 @@ public class Usuario {
 		this.nome = nome;
 	}
 	
-	
-	
-	public Usuario(int matricula2, String login2, String senha2, String nome2, String email2
-			, String telefone2) {
+	public Usuario() {
 		super();
-		this.matricula = matricula;
-		this.login = login;
-		this.senha = senha;
-		this.nome = nome;
-		this.email = email;
-		this.telefone = telefone;
+		// TODO Auto-generated constructor stub
 	}
+	
+	public Usuario(int construMatricula, String construLogin, String construSenha, String construNome, String construEmail
+			, String construTelefone) {
+		super();
+		this.matricula = construMatricula;//objeto que chamou recebe valor do contrutor
+		this.login = construLogin; 		  //objeto que chamou recebe valor do contrutor
+		this.senha = construSenha;        //objeto que chamou recebe valor do contrutor
+		this.nome = construNome;          //objeto que chamou recebe valor do contrutor
+		this.email = construEmail;        //objeto que chamou recebe valor do contrutor
+		this.telefone = construTelefone;  //objeto que chamou recebe valor do contrutor
+	}
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nUSUÁRIO:\n");
+		System.out.println("Matrícula: "+this.matricula);//saída dos valores dados no contrutor
+		System.out.println("Login: "+this.login);
+		System.out.println("Senha"+this.senha);
+		System.out.println("Nome"+this.nome);
+		System.out.println("Email"+this.email);
+		System.out.println("Telefone"+this.telefone);
+		
+		
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "USUÁRIO \n|matricula: " + matricula + "|     |login: " + login + "|     |senha: " + senha + "|     |nome:" 

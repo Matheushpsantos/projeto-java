@@ -3,7 +3,7 @@ package model;
 public class Pedido {
 
 	int numero;
-	String dataEmissão;
+	String dataEmissao;
 	String formaDePagamento;
 	double valorTotal;
 	String situacao;
@@ -14,10 +14,10 @@ public class Pedido {
 		this.numero = numero;
 	}
 	public String getDataEmissão() {
-		return dataEmissão;
+		return dataEmissao;
 	}
 	public void setDataEmissão(String dataEmissão) {
-		this.dataEmissão = dataEmissão;
+		this.dataEmissao = dataEmissão;
 	}
 	public String getFormaDePagamento() {
 		return formaDePagamento;
@@ -39,8 +39,31 @@ public class Pedido {
 	}
 	@Override
 	public String toString() {
-		return "PEDIDO \n|numero: " + numero + "|    |dataEmissão: " + dataEmissão + "|    |formaDePagamento: " + formaDePagamento
+		return "PEDIDO \n|numero: " + numero + "|    |dataEmissão: " + dataEmissao + "|    |formaDePagamento: " + formaDePagamento
 				+ "|\n\n|valorTotal: " + valorTotal + "|    |situacao:" + situacao +"|\n";
+	}
+	
+	public Pedido() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Pedido(int ConstruNumero, String ConstruDataEmissão, String ConstruFormaDePagamento, double ConstruValorTotal, String ConstruSituacao) {
+		super();
+		this.numero = ConstruNumero;
+		this.dataEmissao = ConstruDataEmissão;
+		this.formaDePagamento = ConstruFormaDePagamento;
+		this.valorTotal = ConstruValorTotal;
+		this.situacao = ConstruSituacao;
+	}
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nPEDIDO:\n");
+		System.out.println("Numero: "+this.numero);
+		System.out.println("Data de emissao: "+this.dataEmissao);
+		System.out.println("Forma de pagamento: "+this.formaDePagamento);
+		System.out.println("Valor total: "+this.valorTotal);
+		System.out.println("situação: "+this.situacao);
 	}
 	
 	
