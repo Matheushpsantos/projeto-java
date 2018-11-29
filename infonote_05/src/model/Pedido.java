@@ -1,5 +1,7 @@
 package model;
 
+import com.sun.scenario.effect.impl.prism.ps.PPSBlend_COLOR_DODGEPeer;
+
 public class Pedido {
 
 	private int numero;
@@ -8,7 +10,41 @@ public class Pedido {
 	private double valorTotal;
 	private String situacao;
 	
+	private Endereco novaEntrega;
+	private ItemDePedido itens[] = new ItemDePedido[10];
 	
+	
+	
+	public boolean inserirItem (ItemDePedido item) {
+	
+		for (int i = 0; i< itens.length; i++) {
+			if(itens[i]==null) {
+				itens[i] = item;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nPEDIDO:\n");
+		System.out.println("Numero: "+this.numero);
+		System.out.println("Data de emissao: "+this.dataEmissao);
+		System.out.println("Forma de pagamento: "+this.formaDePagamento);
+		System.out.println("Valor total: "+this.valorTotal);
+		System.out.println("situação: "+this.situacao);
+		System.out.println("\n\nITENS DO PEDIDO:\n");
+		for (int i = 0; i< itens.length; i++) {
+			if(itens[i]!= null) {
+				itens[i].mostrar();
+			}
+		}
+	}
+	
+//===============================================================================	
+//===============================================================================	
 	public int getNumero() {
 		return numero;
 	}
@@ -39,10 +75,13 @@ public class Pedido {
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
 	}
-	@Override
-	public String toString() {
-		return "PEDIDO \n|numero: " + numero + "|    |dataEmissão: " + dataEmissao + "|    |formaDePagamento: " + formaDePagamento
-				+ "|\n\n|valorTotal: " + valorTotal + "|    |situacao:" + situacao +"|\n";
+	
+	
+	public Endereco getNovaEntrega() {
+		return novaEntrega;
+	}
+	public ItemDePedido[] getItens() {
+		return itens;
 	}
 	
 	public Pedido() {
@@ -57,16 +96,10 @@ public class Pedido {
 		this.valorTotal = ConstruValorTotal;
 		this.situacao = ConstruSituacao;
 	}
-	
-	public void mostrar() {
-		
-		System.out.println("\n\nPEDIDO:\n");
-		System.out.println("Numero: "+this.numero);
-		System.out.println("Data de emissao: "+this.dataEmissao);
-		System.out.println("Forma de pagamento: "+this.formaDePagamento);
-		System.out.println("Valor total: "+this.valorTotal);
-		System.out.println("situação: "+this.situacao);
+
+	@Override
+	public String toString() {
+		return "PEDIDO \n|numero: " + numero + "|    |dataEmissão: " + dataEmissao + "|    |formaDePagamento: " + formaDePagamento
+				+ "|\n\n|valorTotal: " + valorTotal + "|    |situacao:" + situacao +"|\n";
 	}
-	
-	
 }

@@ -11,6 +11,20 @@ public class Endereco {
 	private String cep;
 	
 	
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nENDEREÇO:\n");
+		System.out.println("Logradouro: "+this.logradouro);
+		System.out.println("Numero: "+this.numero);
+		System.out.println("Complemento: "+this.complemento);
+		System.out.println("Bairro: "+this.bairro);
+		System.out.println("Cidade: "+this.cidade);
+		System.out.println("Estado: "+this.estado);
+		System.out.println("Cep: "+this.cep);
+		
+	}
+
 	public String getLogradouro() {
 		return logradouro;
 	}
@@ -53,14 +67,7 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	@Override
-	public String toString() {
-		return "ENDEREÇO \n|logradouro: " + logradouro + "|     |numero: " + numero 
-				+ "\n\n|complemento: " + complemento
-				+ "|     |bairro: " + bairro + "|     |cidade: " + cidade + "|     |estado: " + estado + "|\n\n|cep: " + cep +"|\n";
-	}
-	
-	
+
 	
 	public Endereco() {
 		super();
@@ -78,17 +85,10 @@ public class Endereco {
 		this.cep = ConstruCep;
 	}
 	
-	public void mostrar() {
-		
-		System.out.println("\n\nENDEREÇO:\n");
-		System.out.println("Logradouro: "+this.logradouro);
-		System.out.println("Numero: "+this.numero);
-		System.out.println("Complemento: "+this.complemento);
-		System.out.println("Bairro: "+this.bairro);
-		System.out.println("Cidade: "+this.cidade);
-		System.out.println("Estado: "+this.estado);
-		System.out.println("Cep: "+this.cep);
-		
+	@Override
+	public String toString() {
+		return "ENDEREÇO \n|logradouro: " + logradouro + "|     |numero: " + numero 
+				+ "\n\n|complemento: " + complemento
+				+ "|     |bairro: " + bairro + "|     |cidade: " + cidade + "|     |estado: " + estado + "|\n\n|cep: " + cep +"|\n";
 	}
-
 }

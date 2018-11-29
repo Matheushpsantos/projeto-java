@@ -5,6 +5,17 @@ public class ItemDePedido {
 	private int qtde;
 	private double subtotal;
 	
+	private Notebook notebook;
+	
+	
+	
+	
+	public void mostrar() {
+		
+		System.out.println("\n\nITEM DE PEDIDO:\n");
+		System.out.println("Quantidade: "+this.qtde);
+		System.out.println("Subtotal: "+this.subtotal);
+	}
 	
 	public int getQtde() {
 		return qtde;
@@ -24,6 +35,10 @@ public class ItemDePedido {
 	}
 	
 	
+	public Notebook getNotebook() {
+		return notebook;
+	}
+	
 	
 	public ItemDePedido() {
 		super();
@@ -35,11 +50,11 @@ public class ItemDePedido {
 		this.subtotal = construSubtotal;
 	}
 	
-	public void mostrar() {
-		
-		System.out.println("\n\nITEM DE PEDIDO:\n");
-		System.out.println("Quantidade: "+this.qtde);
-		System.out.println("Subtotal: "+this.subtotal);
-	}
 	
+	public ItemDePedido(int construQtde, double construSubtotal,Notebook construNotebook) {
+		super();
+		this.notebook = construNotebook;
+		this.qtde = construQtde;
+		this.subtotal = construSubtotal; 
+	}
 }

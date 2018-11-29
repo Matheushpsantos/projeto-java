@@ -11,6 +11,23 @@ public class Notebook {
 	private String dataCadastro;
 	
 	
+	
+	
+	
+	public void mostrar () {
+		
+		System.out.println("\n\nNOTEBOOK:\n");
+		System.out.println("Numero do Notebook: "+this.numeroNote);
+		System.out.println("Modelo: "+this.modelo);
+		System.out.println("Descrição: "+this.descricao);
+		System.out.println("Estoque: "+this.estoque);
+		System.out.println("Preço Unitário: "+this.precoUnitario);
+		System.out.println("Figura: "+this.figura);
+		System.out.println("Data de cadastro: "+this.dataCadastro);
+	}
+
+	
+	
 	public int getNumeroNote() {
 		return numeroNote;
 	}
@@ -53,12 +70,6 @@ public class Notebook {
 	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-	@Override
-	public String toString() {
-		return "NOTEBOOK \n|numeroNote: " + numeroNote + "|     |modelo: " + modelo + "|     |descricao: " + descricao + "|     |estoque: "
-				+ estoque + "|\n\n|precoUnitario=" + precoUnitario + "|     |figura:" + figura + "|     |dataCadastro: " + dataCadastro +"|\n";
-	}
-	
 	
 	public Notebook() {
 		super();
@@ -76,18 +87,9 @@ public class Notebook {
 		this.dataCadastro = construDataCadastro;
 	}
 	
-	public void mostrar () {
-		
-		System.out.println("\n\nNOTEBOOK:\n");
-		System.out.println("Numero do Notebook: "+this.numeroNote);
-		System.out.println("Modelo: "+this.modelo);
-		System.out.println("Descrição: "+this.descricao);
-		System.out.println("Estoque: "+this.estoque);
-		System.out.println("Preço Unitário: "+this.precoUnitario);
-		System.out.println("Figura: "+this.figura);
-		System.out.println("Data de cadastro: "+this.dataCadastro);
-																
+	@Override
+	public String toString() {
+		return "NOTEBOOK \n|numeroNote: " + numeroNote + "|     |modelo: " + modelo + "|     |descricao: " + descricao + "|     |estoque: "
+				+ estoque + "|\n\n|precoUnitario=" + precoUnitario + "|     |figura:" + figura + "|     |dataCadastro: " + dataCadastro +"|\n";
 	}
-	
-	
 }

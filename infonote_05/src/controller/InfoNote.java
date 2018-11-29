@@ -8,10 +8,27 @@ public class InfoNote {
 	
 	Usuario user;
 	boolean logado = false;
+	Notebook[] note = new Notebook[5];
+	
 	
 	public static void main(String [] args) {
 		
 		InfoNote info = new InfoNote();
+		
+	
+		Notebook[] note = new Notebook[5];
+		note [0] = new Notebook(1, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+				"29/11/2018");
+		note [1] = new Notebook(2, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+				"29/11/2018");
+		note [0] = new Notebook(3, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+				"29/11/2018");
+		note [0] = new Notebook(4, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+				"29/11/2018");
+		note [0] = new Notebook(5, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+				"29/11/2018");
+		
+		Pedido pedido1;
 		
 		int opcao = 8;
 		
@@ -74,14 +91,14 @@ public class InfoNote {
 		System.out.println("\n\n===================================================");
 		System.out.println("        Infonote - se não é Info não vendemos      ");
 		System.out.println("===================================================");
-		System.out.println("1- Login");
-		System.out.println("2- Cadastrar Cliente");
-		System.out.println("3- Buscar Notebook");
-		System.out.println("4- Inserir Notebook no carrinho");
-		System.out.println("5- Remover Notebook no carrinho");
-		System.out.println("6- Ver Carrinho");
-		System.out.println("7- Ver Carrinho");
-		System.out.println("8- sair");
+		System.out.println("1 - Login");
+		System.out.println("2 - Cadastrar Cliente");
+		System.out.println("3 - Buscar Notebook");
+		System.out.println("4 - Inserir Notebook no carrinho");
+		System.out.println("5 - Remover Notebook no carrinho");
+		System.out.println("6 - Ver Carrinho");
+		System.out.println("7 - Ver Carrinho");
+		System.out.println("8 - sair");
 		
 	}
 	
@@ -127,11 +144,23 @@ public class InfoNote {
 	}
 
 	public void buscarNotebook() {
-		System.out.println("Opção BuscarNotebook - Em Construção");
+		for (int i = 0; i < note.length; i++ ) {
+			if (note[i] != null) {
+				System.out.println(note[i].getNumeroNote()+"====="+ note[i].getModelo());
+			}
+		}
 	}
 
+	
 	public void manterCarrinho() {
 		System.out.println("Opção ManterCarrinho - Em Construção");
+	}
+	
+	public void inserirNotebook() {
+
+		String numeroNote = teclado.lerTexto("Informe o número do Notebook para compra: ");
+	// parte 11
+	
 	}
 	
 	public void efetuarCompra() {
