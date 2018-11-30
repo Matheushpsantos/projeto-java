@@ -8,27 +8,30 @@ public class InfoNote {
 	
 	Usuario user;
 	boolean logado = false;
-	Notebook[] note = new Notebook[5];
+	Pedido pedido;
+	Notebook[] note = new Notebook[10];
 	
+	
+	//testar retornando void
+	
+	public InfoNote() {
+	note [0] = new Notebook(1, "dell vs2014", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+			"29/11/2018");
+	note [1] = new Notebook(2, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+			"29/11/2018");
+	note [2] = new Notebook(3, "dell vs2018", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+			"29/11/2018");
+	note [3] = new Notebook(4, "dell vs2015", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+			"29/11/2018");
+	note [5] = new Notebook(5, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
+			"29/11/2018");
+	}
 	
 	public static void main(String [] args) {
 		
 		InfoNote info = new InfoNote();
 		
 	
-		Notebook[] note = new Notebook[5];
-		note [0] = new Notebook(1, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
-				"29/11/2018");
-		note [1] = new Notebook(2, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
-				"29/11/2018");
-		note [0] = new Notebook(3, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
-				"29/11/2018");
-		note [0] = new Notebook(4, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
-				"29/11/2018");
-		note [0] = new Notebook(5, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
-				"29/11/2018");
-		
-		Pedido pedido1;
 		
 		int opcao = 8;
 		
@@ -97,7 +100,7 @@ public class InfoNote {
 		System.out.println("4 - Inserir Notebook no carrinho");
 		System.out.println("5 - Remover Notebook no carrinho");
 		System.out.println("6 - Ver Carrinho");
-		System.out.println("7 - Ver Carrinho");
+		System.out.println("7 - Efetuar Compra");
 		System.out.println("8 - sair");
 		
 	}
@@ -146,7 +149,7 @@ public class InfoNote {
 	public void buscarNotebook() {
 		for (int i = 0; i < note.length; i++ ) {
 			if (note[i] != null) {
-				System.out.println(note[i].getNumeroNote()+"====="+ note[i].getModelo());
+				System.out.println(note[i].getNumeroNote()+" ===== "+ note[i].getModelo());
 			}
 		}
 	}
@@ -156,12 +159,30 @@ public class InfoNote {
 		System.out.println("Opção ManterCarrinho - Em Construção");
 	}
 	
+	
 	public void inserirNotebook() {
 
 		String numeroNote = teclado.lerTexto("Informe o número do Notebook para compra: ");
-	// parte 11
 	
+		if (pedido == null) {
+			pedido = new Pedido();
+		}
+	
+		Notebook aux = null;
+		for (int i = 0; i< note.length; i++) {
+			if (note [i] != null && numeroNote.equals(note[i].getNumeroNote())) {
+				aux = note[i];
+			}
+		}
+		if (aux==null) {
+			return;
+		}
+		ItemDePedido item = new ItemDePedido(1,aux.getPrecoUnitario(), aux);
+		
+		pedido.inserirItem(item);
 	}
+	
+	
 	
 	public void efetuarCompra() {
 		System.out.println(" Opção EfetuarCompra - Em Construção");
