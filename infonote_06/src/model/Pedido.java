@@ -1,6 +1,5 @@
 package model;
 
-import com.sun.scenario.effect.impl.prism.ps.PPSBlend_COLOR_DODGEPeer;
 
 public class Pedido {
 
@@ -27,7 +26,7 @@ public class Pedido {
 	}
 
 	
-	public void mostrar() {
+	public void mostrar() {//não utilizar no infonote_06
 		
 		System.out.println("\n\nPEDIDO:\n");
 		System.out.println("Numero: "+this.numeroPedido);
@@ -88,18 +87,35 @@ public class Pedido {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Pedido(int ConstruNumero, String ConstruDataEmissão, String ConstruFormaDePagamento, double ConstruValorTotal, String ConstruSituacao) {
+	public Pedido(int ConstruNumero, String ConstruDataEmissão, String ConstruFormaDePagamento,
+			double ConstruValorTotal, String ConstruSituacao, Endereco ConstruEndEntrega) {
 		super();
 		this.numeroPedido = ConstruNumero;
 		this.dataEmissao = ConstruDataEmissão;
 		this.formaDePagamento = ConstruFormaDePagamento;
 		this.valorTotal = ConstruValorTotal;
 		this.situacao = ConstruSituacao;
+		this.enderecoEntrega = ConstruEndEntrega;
 	}
 
 	@Override
 	public String toString() {
-		return "PEDIDO \n|numeroPedido: " + numeroPedido + "|    |dataEmissão: " + dataEmissao + "|    |formaDePagamento: " + formaDePagamento
-				+ "|\n\n|valorTotal: " + valorTotal + "|    |situacao:" + situacao +"|\n";
+		final String ENTER = "\n";
+		String retValue = "";
+		
+		retValue = "PEDIDO" + ENTER +
+				"Numero do Pedido: " + numeroPedido + ENTER+
+				"Data da Emissão: " + dataEmissao + ENTER+
+				"Forma De Pagamento: " + formaDePagamento+ENTER+ 
+				"valorTotal: " + valorTotal + ENTER+
+				"situacao: " + situacao+ ENTER +
+				"Endereço de Entrega: "+ENTER+
+				"Itens: ";
+		
+		for (int i = 0; i< itens.length; i++) {
+			retValue += itens[i]+ ENTER;
+		}
+		
+		return retValue;
 	}
 }

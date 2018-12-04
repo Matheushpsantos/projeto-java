@@ -14,7 +14,7 @@ public class Notebook {
 	
 	
 	
-	public void mostrar () {
+	public void mostrar () {//não utilizar no infonote_06
 		
 		System.out.println("\n\nNOTEBOOK:\n");
 		System.out.println("Numero do Notebook: "+this.serialNote);
@@ -75,8 +75,8 @@ public class Notebook {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Notebook(int construNumeroNote, String construModelo, String construDescricao, int construEstoque, double construPrecoUnitario, String construFigura,
-			String construDataCadastro) {
+	public Notebook(int construNumeroNote, String construModelo, String construDescricao, int construEstoque, 
+			double construPrecoUnitario, String construFigura,String construDataCadastro) {
 		super();
 		this.serialNote = construNumeroNote;
 		this.modelo = construModelo;
@@ -89,7 +89,18 @@ public class Notebook {
 	
 	@Override
 	public String toString() {
-		return "NOTEBOOK \n|serialNote: " + serialNote + "|     |modelo: " + modelo + "|     |descricao: " + descricao + "|     |estoque: "
-				+ estoque + "|\n\n|precoUnitario=" + precoUnitario + "|     |figura:" + figura + "|     |dataCadastro: " + dataCadastro +"|\n";
+		final String ENTER = "\n";
+		String retValue = "";
+		
+		retValue = "NOTEBOOK"+ENTER+
+				"serial do Note: " + serialNote + ENTER+
+				"modelo: " + modelo +ENTER+
+				"descricao: " + descricao + ENTER+
+				"estoque: "+ estoque + ENTER+
+				"precoUnitario: " + precoUnitario +ENTER+
+				"figura:" + figura + ENTER+
+				"Data do Cadastro: " + dataCadastro +ENTER;
+
+		return retValue;
 	}
 }

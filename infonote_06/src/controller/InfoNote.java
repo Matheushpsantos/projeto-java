@@ -6,7 +6,7 @@ import util.teclado;
 public class InfoNote {
 
 	
-	UsuarioOld user;
+	Cliente cliente;
 	boolean logado = false;
 	Pedido pedido;
 	Notebook[] note = new Notebook[10];
@@ -129,21 +129,32 @@ public class InfoNote {
 		System.out.println("           Infonote - Cadastro de Usuários.        ");
 		System.out.println("===================================================");
 		
-		int matricula = teclado.lerInt("Matrícula: ");
-		String login = teclado.lerTexto("Login: ");
+		String login = teclado.lerTexto("login: ");
 		String senha = teclado.lerTexto("Senha: ");
+		int tipo = 1;
+		String codigoCliente = teclado.lerTexto("Código de cliente: ");
 		String nome = teclado.lerTexto("Nome: ");
 		String email = teclado.lerTexto("E-mail: ");
 		String telefone = teclado.lerTexto("Telefone: ");
 		
-		user = new UsuarioOld ( matricula, login, senha, nome, email
-				, telefone);
+		Endereco // setar informaçoes do indereço
+		
+		Cliente cli = new Cliente (login,
+								senha,
+								tipo,
+								codigoCliente,
+								nome, 
+								email,
+								telefone,
+								enderecos);
+		
+		
 		
 		System.out.println("===================================================");
 		System.out.println("           Usuário Cadastrado Com Sucesso.         ");
 		System.out.println("===================================================");
 		
-		System.out.println(user);
+		System.out.println(cli);
 	}
 
 	public void buscarNotebook() {

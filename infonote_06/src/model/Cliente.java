@@ -11,6 +11,27 @@ public class Cliente extends Usuario {
 	
 	
 	
+	public boolean inserirPedido(Pedido paramPedido){
+		
+		for (int i =0; i< pedidos.length; i++) {
+			if (pedidos[i]==null) {
+				pedidos[i]= paramPedido;
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	public boolean inserirEndereco (Endereco paramEnderecos) {
+		for (int i=0; i < enderecos.length; i++) {
+			if(enderecos[i]==null) {
+				enderecos[i] = paramEnderecos;
+				return true;
+			}
+		}
+		return false;
+	}
 //========================================================
 	public String getCodigoCliente() {
 		return codigoCliente;
@@ -48,44 +69,24 @@ public class Cliente extends Usuario {
 	public void setPedido(Pedido[] pedido) {
 		this.pedidos = pedido;
 	}
+	
 	public Cliente() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Cliente(String codigoCliente, String nome, String email, String telefone, Endereco[] enderecos,
-			Pedido[] pedido) {
+	
+	
+	public Cliente(String login, String senha, int tipo,String codigoCliente, 
+			String nome, String email, String telefone, Endereco enderecos) {
 		super();
 		this.codigoCliente = codigoCliente;
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;
-		this.enderecos = enderecos;
-		this.pedidos = pedido;
+		inserirEndereco(enderecos);
 	}
-	
-	public boolean inserirPedido(Pedido paramPedido){
-		
-		for (int i =0; i< pedidos.length; i++) {
-			if (pedidos[i]==null) {
-				pedidos[i]= paramPedido;
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	
-	public boolean inserirEndereco (Endereco paramEnderecos) {
-		for (int i=0; i < enderecos.length; i++) {
-			if(enderecos[i]==null) {
-				enderecos[i] = paramEnderecos;
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	
+
+
 	@Override
 	public String toString() {
 		final String ENTER = "\n";
@@ -94,7 +95,7 @@ public class Cliente extends Usuario {
 		
 		retValue = "Informações dobre o cliente: "+ ENTER + super.toString()+ 
 				"Código do cliente: "+codigoCliente+ ENTER + 
-				"Nome:"+ nome + ENTER + 
+				"Nome: "+ nome + ENTER + 
 				"E-mail: " + email + ENTER+
 				"Telefone: " + telefone+ ENTER+
 				"Endereco: "+ enderecos[0];
@@ -103,6 +104,4 @@ public class Cliente extends Usuario {
 	}
 	
 }
-//
-//   FINALIZARRR PARTE 8
-//
+

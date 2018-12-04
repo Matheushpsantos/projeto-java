@@ -12,7 +12,7 @@ public class Endereco {
 	
 	
 	
-	public void mostrar() {
+	public void mostrar() {// não utilizar no infonote_06
 		
 		System.out.println("\n\nENDEREÇO:\n");
 		System.out.println("Logradouro: "+this.logradouro);
@@ -87,8 +87,18 @@ public class Endereco {
 	
 	@Override
 	public String toString() {
-		return "ENDEREÇO \n|logradouro: " + logradouro + "|     |numero: " + numero 
-				+ "\n\n|complemento: " + complemento
-				+ "|     |bairro: " + bairro + "|     |cidade: " + cidade + "|     |estado: " + estado + "|\n\n|cep: " + cep +"|\n";
+		final String ENTER = "\n";
+		String retValue = "";
+		
+		retValue = "ENDEREÇO"+ENTER+
+				"logradouro: " + logradouro +ENTER +
+				"numero: " + numero +ENTER+ 
+				"complemento: " + complemento+ENTER+
+				"bairro: " + bairro +ENTER+
+				"cidade: " + cidade +ENTER+
+				"estado: " + estado +ENTER +
+				"cep: " + cep + ENTER;
+		
+		return retValue;
 	}
 }

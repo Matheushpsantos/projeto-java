@@ -24,7 +24,17 @@ public class Funcionario extends Usuario {
 		super();
 		this.matricula = matricula;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		final String ENTER = "\n";
+		String retValue = "";
+		
+		retValue = "Funcionario matricula: " + matricula;
+		
+		return retValue;
+	}
+	
+	
+	
 }
