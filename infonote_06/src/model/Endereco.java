@@ -73,8 +73,8 @@ public class Endereco {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Endereco(String ConstruLogradouro, String ConstruNumero, String ConstruComplemento, String ConstruBairro, String ConstruCidade, String ConstruEstado,
-			String ConstruCep) {
+	public Endereco(String ConstruLogradouro, String ConstruNumero, String ConstruComplemento,
+			String ConstruBairro, String ConstruCidade, String ConstruEstado,String ConstruCep) {
 		super();
 		this.logradouro = ConstruLogradouro;
 		this.numero = ConstruNumero;

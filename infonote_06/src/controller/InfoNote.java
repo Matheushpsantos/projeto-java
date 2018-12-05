@@ -135,10 +135,24 @@ public class InfoNote {
 		String codigoCliente = teclado.lerTexto("Código de cliente: ");
 		String nome = teclado.lerTexto("Nome: ");
 		String email = teclado.lerTexto("E-mail: ");
-		String telefone = teclado.lerTexto("Telefone: ");
+		String telefone = teclado.lerTexto("Telefone: ");// esses atributos vão para Cliente Cli
+
+		String Logradouro = teclado.lerTexto("Logadouro: ");
+		String Numero = teclado.lerTexto("Numero: ");
+		String Complemento = teclado.lerTexto("Complemeto: ");
+		String Bairro = teclado.lerTexto("Bairro: ");
+		String Cidade = teclado.lerTexto("Cidade: ");
+		String Estado = teclado.lerTexto("Estado: ");
+		String Cep = teclado.lerTexto("Cep: ");
 		
-		Endereco // setar informaçoes do indereço
-		
+		Endereco enderecos = new Endereco(Logradouro,
+										Numero, 
+										Complemento, 
+										Bairro, 
+										Cidade, 
+										Estado, 
+										Cep);
+
 		Cliente cli = new Cliente (login,
 								senha,
 								tipo,
