@@ -1,5 +1,6 @@
 package controller;
 import model.*;
+import util.GerarSenha;
 import util.teclado;
 
 
@@ -96,7 +97,11 @@ public class InfoNote {
 		
 		System.out.println("\n\n===================================================");
 		System.out.println("        Infonote - se não é Info não vendemos      ");
+		if (logado == true) {
+			System.out.println("Bem vindo," + cliente.getNomeInvertido());
+		}
 		System.out.println("===================================================");
+		
 		System.out.println("1 - Login");
 		System.out.println("2 - Cadastrar Cliente");
 		System.out.println("3 - Buscar Notebook");
@@ -157,6 +162,10 @@ public class InfoNote {
 		String Estado = teclado.lerTexto("Estado: ");
 		String Cep = teclado.lerTexto("Cep: ");
 		
+		if (senha.equals("")|| senha == null) {
+			senha = GerarSenha.gerarSenha();
+			System.out.println("Senha gerada"+ senha);
+		}
 		Endereco enderecos = new Endereco(Logradouro,
 										Numero, 
 										Complemento, 

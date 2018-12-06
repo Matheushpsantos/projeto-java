@@ -10,6 +10,17 @@ public class Cliente extends Usuario implements IUsuario {
 	Pedido[] pedidos = new Pedido[10];
 	
 	
+	public String getNomeInvertido() {
+		String nome, sobrenome;
+		
+		int posicao = getNome().indexOf(" ");
+		nome = getNome().substring(0, posicao);
+		
+		posicao = getNome().lastIndexOf(" ");
+		sobrenome = getNome().substring(posicao + 1);
+		
+		return sobrenome + ", "+ nome;
+	}
 	
 	public boolean inserirPedido(Pedido paramPedido){
 		
