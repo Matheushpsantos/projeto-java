@@ -25,8 +25,8 @@ public class Funcionario extends Usuario implements IUsuario {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Funcionario(String matricula) {
-		super();
+	public Funcionario(String login, String senha, int tipo,String matricula) {
+		super(login, senha, tipo);
 		this.matricula = matricula;
 	}
 

@@ -50,7 +50,7 @@ public abstract class Usuario {
 		retValue = "Usuario: " + ENTER +
 				" login: " + login +ENTER + 
 				"senha: " + senha + ENTER+
-				"tipo: " + tipo ;
+				"tipo: " + tipo+ ENTER ;
 		
 		
 		return retValue;

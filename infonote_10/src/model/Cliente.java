@@ -47,7 +47,7 @@ public class Cliente extends Usuario implements IUsuario {
 	public boolean validarLogin(String login, String senha) {
 		if (getLogin().equals(login) && getSenha().equals(senha)) {
 			return true;
-		}
+		} 
 		return false;
 	}
 	
@@ -98,7 +98,7 @@ public class Cliente extends Usuario implements IUsuario {
 	
 	public Cliente(String login, String senha, int tipo,String codigoCliente, 
 			String nome, String email, String telefone, Endereco enderecos) {
-		super();
+		super(login, senha, tipo);
 		this.codigoCliente = codigoCliente;
 		this.nome = nome;
 		this.email = email;
@@ -113,13 +113,13 @@ public class Cliente extends Usuario implements IUsuario {
 		String retValue = "";
 		
 		
-		retValue = "Informações dobre o cliente: "+ ENTER + super.toString()+ 
+		retValue = "Informações sobre o cliente: "+ ENTER + super.toString()+ 
 				"Código do cliente: "+codigoCliente+ ENTER + 
 				"Nome: "+ nome + ENTER + 
 				"E-mail: " + email + ENTER+
 				"Telefone: " + telefone+ ENTER+
-				"Endereco: "+ enderecos[0];
-		
+				"Endereço: "+ enderecos[0];
+
 		return retValue;
 	}
 

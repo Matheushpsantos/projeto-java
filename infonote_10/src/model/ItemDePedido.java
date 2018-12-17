@@ -1,5 +1,9 @@
 package model;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
+
 public class ItemDePedido {
 
 	private int qtde;
@@ -61,9 +65,11 @@ public class ItemDePedido {
 		final String ENTER = "\n";
 		String retValue = "";
 		
+		Locale local = new Locale("pt", "BR");
+		
 		retValue = "ITEM DE PEDIDO"+ENTER+
 				"Quantidade: " + qtde + ENTER+ 
-				"subtotal: " + subtotal + ENTER;
+				"subtotal: " + NumberFormat.getCurrencyInstance(local).format(this.subtotal) + ENTER;
 		
 		return retValue;
 	}
