@@ -35,7 +35,7 @@ public class InfoNote {
 	
 	
 	
-	public InfoNote() throws Exception {
+	public InfoNote() {
 	note [0] = new Notebook(1, "dell vs2014", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
 			"29/11/2018");
 	note [1] = new Notebook(2, "dell vs2017", "cpu intel core, memoria 4GB", 6, 5890.00, "dell.png",
@@ -54,7 +54,7 @@ public class InfoNote {
 
 	}
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)  {
 		InfoNote info = new InfoNote();
 		int opcao = SAIR;
 		do {
