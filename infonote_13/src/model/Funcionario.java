@@ -1,14 +1,20 @@
 package model;
 
+import model.DAO.FuncionarioDAO;
+
 public class Funcionario extends Usuario implements IUsuario {
 	
 	String matricula;
 
 	@Override
-	public boolean validarLogin(String login, String senha) {
-		// TODO Auto-generated method stub
+	public boolean validarLogin (String login, String senha){
+		Funcionario funcionario = FuncionarioDAO.buscarPorLoginSenha(login, senha);
+		if(funcionario != null){
+			return true;
+		}
 		return false;
 	}
+
 	
 	
 //=================================================

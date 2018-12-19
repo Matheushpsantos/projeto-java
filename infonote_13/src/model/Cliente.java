@@ -1,5 +1,7 @@
 package model;
 
+import model.DAO.*;
+
 public class Cliente extends Usuario implements IUsuario {
 
 	String codigoCliente;
@@ -43,16 +45,20 @@ public class Cliente extends Usuario implements IUsuario {
 		}
 		return false;
 	}
+
 	@Override
-	public boolean validarLogin(String login, String senha) {
-		if (getLogin().equals(login) && getSenha().equals(senha)) {
+	public boolean validarLogin (String login, String senha){
+		Cliente cliente = ClienteDAO.buscarPorLoginSenha(login, senha);
+		if(cliente != null){
 			return true;
-		} 
+		}
 		return false;
 	}
+
 	
 	
-//========================================================
+
+	//========================================================
 	public String getCodigoCliente() {
 		return codigoCliente;
 	}
@@ -107,6 +113,17 @@ public class Cliente extends Usuario implements IUsuario {
 	}
 
 
+
+	public Cliente(String login, String senha, int tipo, String codigoCliente,
+			String nome, String email, String telefone) {
+		
+		super(login, senha, tipo);
+		
+		this.codigoCliente = codigoCliente;
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+	}
 	@Override
 	public String toString() {
 		final String ENTER = "\n";
@@ -117,8 +134,7 @@ public class Cliente extends Usuario implements IUsuario {
 				"Código do cliente: "+codigoCliente+ ENTER + 
 				"Nome: "+ nome + ENTER + 
 				"E-mail: " + email + ENTER+
-				"Telefone: " + telefone+ ENTER+
-				"Endereço: "+ enderecos[0];
+				"Telefone: " + telefone+ ENTER;
 
 		return retValue;
 	}
