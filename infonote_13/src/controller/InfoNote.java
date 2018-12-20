@@ -11,6 +11,7 @@ import util.GerarSenha;
 import util.Teclado;
 
 
+
 public class InfoNote {
 
 	Usuario usuario;
@@ -141,7 +142,8 @@ public class InfoNote {
 		System.out.println("6 - ver Carrinho");
 		System.out.println("7 - Efetuar Compra");
 		System.out.println("8 - Ajuda");
-		System.out.println("9 - Sair");
+		System.out.println("9 - Área administrativa");
+		System.out.println("10 - sair");
 	}
 	
 	public void efetuarLogin() {
@@ -333,8 +335,18 @@ public class InfoNote {
 	}
 
 	public void cadastrarNotebook(){
-			
-		System.out.println("metodo em construção");
+		
+		System.out.println("===================================  =");
+		System.out.println("         Cadastro de Notebbok        ");
+		System.out.println("====================================  ");
+		String login = Teclado.lerTexto("Login: ");
+		String senha = Teclado.lerTexto("Senha: ");
+		int tipo = Teclado.lerInt("tipo 0 ou 1?: ");
+		
+		Notebook contato = NotebookDAO.inserir(login, senha, tipo);
+		
+		System.out.println(contato);
+		
 	}
 
 	public void mostrarNotebooks() {
